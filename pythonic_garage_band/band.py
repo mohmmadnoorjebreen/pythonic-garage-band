@@ -3,6 +3,7 @@ from abc import ABC, abstractmethod, abstractstaticmethod, abstractclassmethod
 
 class Band(ABC):
     created_Band = 0
+
     def __init__(self, name , members : list):
        self.name = name
        self.members = members
@@ -17,10 +18,10 @@ class Band(ABC):
     @classmethod
     def to_list (cls):
         if Band.created_Band == 0:
-           Band.created_Band =1
+           Band.created_Band =+1
            return []
         else:
-            return[1]
+            return[Band.created_Band]
       
 
 
